@@ -9,10 +9,14 @@
 <script>
 var nota;
 
-nota=prompt('ingrese su nota:','');
+nota=parseInt(prompt('Ingrese su nota:',''));
+while(isNaN(nota)){ //false
+    alert('no es un número');
+    nota=parseInt(prompt('Ingrese su nota:',''));
+}
 while(nota<0){
     document.write('ingrese una nota mayor o igual a 0');
-    nota=prompt('ingrese su nota:','');
+    nota=parseInt(prompt('Ingrese su nota:',''));
 }
 if(nota>=0 && nota<=3){
 document.write('su nota es muy deficiente');
